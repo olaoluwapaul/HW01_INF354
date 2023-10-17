@@ -1,0 +1,10 @@
+
+.table-striped>tbody>tr:nth-child(odd)>td,
+.table-striped>tbody>tr:nth-child(odd)>th {
+ background-color: lightgray;
+}
+
+.table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+  }

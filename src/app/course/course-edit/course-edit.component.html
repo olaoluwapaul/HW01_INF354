@@ -1,0 +1,36 @@
+
+<div class="container-fluid">
+   <div class="row">
+     <h3 style="align-content: center;">Edit Course</h3> 
+   <form class="form-horizontal"[formGroup]="editCourseForm" (ngSubmit)="editCourseFunc()" >
+       
+   
+      <label class="control-label col-sm-2"  >Name:</label>
+      <div class="col-sm-10">
+         <input type="text" class="form-control"  placeholder="AIM 101" name="name" formControlName="name" >
+         <br>
+      </div>
+   
+   
+      <label class="control-label col-sm-2"  >Duration:</label>
+      <div class="col-sm-10">
+         <input type="text" class="form-control" placeholder="Semester" name="duration" formControlName="duration"  >
+         <br>
+      </div>
+   
+   
+      <label class="control-label col-sm-2">Description:</label>
+      <div class="col-sm-10">
+       <textarea style="margin-bottom: 20px;"rows="2" placeholder="Year 1, Semester 1. Academic Information Management" name="description" formControlName="description" ></textarea>
+         <br>
+      </div>
+   
+   
+      <div class="col-sm-offset-2 col-sm-10">
+         <button type="submit" class="btn btn-white" style="border-radius: 6px;" [disabled]="!editCourseForm.valid">Submit</button>
+         <button type="button" class="btn btn-warning" style="margin-left: 5px; border-radius: 6px;" routerLink="/">Cancel</button>
+      </div>
+  
+   </form>
+</div>
+</div>

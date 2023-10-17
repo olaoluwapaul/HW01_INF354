@@ -1,0 +1,38 @@
+
+
+<table class =  "table table-striped" style=" border: 1px solid black;  border-collapse: collapse;">
+    <thead>
+        <tr>
+            <th>
+                Name
+            </th>
+            <th>
+                Duration
+            </th>
+            <th>
+                Description
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let courseData of courses">
+            <td>
+                {{courseData.name}}
+           </td>
+           <td>
+              {{courseData.duration}}
+           </td>
+           <td>
+            {{courseData.description}}
+           </td>
+           <td>
+                <button class="btn btn-info" style="margin-right: 5px; border-radius: 6px;"(click)="EditCourse(courseData.courseId)">Edit</button>
+                <button class="btn btn-danger" style="margin-left: 5px; border-radius: 6px;" (click)="DeleteCourse(courseData.courseId)">Delete</button>
+           </td>
+        </tr>
+    </tbody>
+</table> 
+     
+
+
+
